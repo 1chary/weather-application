@@ -51,7 +51,7 @@ const App = () => {
       <div className = "search-container">
         <input type = "search" className = "search-input-box"  onChange = {onChangeUserInput} placeholder = "Enter City Name /  Zip Code"/>
         <button type = "submit" className="search-icon-button-style">
-          <CiSearch className="icon-style" />
+          <CiSearch className="search-icon-style" />
         </button>
       </div>
       {noUserInputMessage && (
