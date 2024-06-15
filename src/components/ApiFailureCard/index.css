@@ -1,0 +1,25 @@
+.failure-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px
+}
+
+.failure-image {
+    height: 150px;
+    width: 300px;
+}
+.api-failure-error-message {
+    font-size: 18px;
+    color: red;
+}
+@media screen and (max-width: 767px) {
+    .failure-image {
+        height: 120px;
+        width: 250px;
+    }
+    .api-failure-error-message {
+        font-size: 14px;
+    }
+} 

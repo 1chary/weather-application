@@ -5,6 +5,7 @@ import "./App.css"
 import { useState } from "react"
 import WeatherReportCard from "./components/WeatherReportCard"
 import ContextFile from "./ContextFile"
+import ApiFailureCard from "./components/ApiFailureCard"
 
 const App = () => {
   const [userInput,changeUserInput] = useState("")
@@ -23,7 +24,6 @@ const App = () => {
       const fetchingDetails = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${userInput}&appid=2fe74895e927cbe81e92169f1a159f12`)
       if (fetchingDetails.ok === true) {
         const data = await fetchingDetails.json()
-        
         const dataConversion = {
             latitude: data.coord.lat,
             longitude: data.coord.lon,
@@ -71,6 +71,9 @@ const App = () => {
       )}
       {storeResponseData && (
         < WeatherReportCard weatherReport = {storeResponseData} />
+      )}
+      {apiFailureMessage && (
+        < ApiFailureCard />
       )}
     </form>
   </div>
