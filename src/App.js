@@ -1,15 +1,17 @@
 import { CiSearch } from "react-icons/ci"
+import { IoMoon } from "react-icons/io5"
+import { WiDaySunny } from "react-icons/wi"
 import "./App.css"
 import { useState } from "react"
 import WeatherReportCard from "./components/WeatherReportCard"
+import ContextFile from "./ContextFile"
 
 const App = () => {
   const [userInput,changeUserInput] = useState("")
   const [storeResponseData,enterWeatherData] = useState(null);
   const [noUserInputMessage, displayNoInputMessage] = useState(false);
   const [apiFailureMessage,displayApiFailure] = useState(false);
-
-
+  const [modeOfApplication,changeModeOfTheApplication] = useState(false)
 
   const onChangeUserInput = (event) => {
     changeUserInput(event.target.value)
@@ -45,13 +47,23 @@ const App = () => {
     }
   }
 
+  const changeMode = () => {
+    changeModeOfTheApplication(!modeOfApplication)
+  }
+
+  let backgroundOfTheContainer = modeOfApplication ? "dark" : "light"
+
   return (
-  <div className = "container-element">
+    <ContextFile.Provider value = {[modeOfApplication,changeModeOfTheApplication]}>
+      <div className = {`container-element ${backgroundOfTheContainer}`}>
     <form className = "form-container" onSubmit = {submitTheInputDetails}>
       <div className = "search-container">
         <input type = "search" className = "search-input-box"  onChange = {onChangeUserInput} placeholder = "Enter City Name /  Zip Code"/>
-        <button type = "submit" className="search-icon-button-style">
-          <CiSearch className="search-icon-style" />
+        <button type = "submit" className="icon-button-style">
+          <CiSearch className="icon-style" />
+        </button>
+        <button type = "button" onClick={changeMode} className="icon-button-style">
+          {modeOfApplication ? < WiDaySunny className="icon-style" /> :  <IoMoon className="icon-style"/>}
         </button>
       </div>
       {noUserInputMessage && (
@@ -62,6 +74,7 @@ const App = () => {
       )}
     </form>
   </div>
+    </ContextFile.Provider>
   )
 }
 

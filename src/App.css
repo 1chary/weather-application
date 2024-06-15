@@ -5,14 +5,26 @@
 }
 
 .container-element {
-  background-image: url("https://wallpaperswide.com/download/light_background-wallpaper-3840x2160.jpg");
-  background-size: cover;
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  
+  
 }
+
+.dark {
+  background-image: url("https://st.depositphotos.com/7149512/58305/i/450/depositphotos_583055722-stock-photo-summer-ukrainian-thunderstorms-skies-storm.jpg");
+  background-size: cover;
+}
+
+.light {
+  background-image: url("https://www.cahoot.com/assets/s3fs-public/styles/d6_standard/public/dimages/federico-respini-syffw0lnr7s-unsplash_large.jpg?h=c66d06c9&itok=g8ydONGl");
+  background-size: cover;
+}
+
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -29,7 +41,7 @@
 }
 .search-container {
   height: 50px;
-  width: 70%;
+  width:75%;
   border-radius: 20px;
   margin-top: 20px;
   border: none;
@@ -44,21 +56,23 @@
 }
 .search-input-box {
   border: none;
-  width: 90%;
+  width: 80%;
   height: 50px;
   outline: none;
   border-radius: 20px;
   background-color: none;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
-.search-icon-button-style {
+.icon-button-style {
   background-color: transparent;
   cursor: pointer;
   border: none;
   outline: none;
 }
-.search-icon-style {
-  font-size: 32px;
+.icon-style {
+  font-size: 30px;
 }
 
 .no-input-error-message {
