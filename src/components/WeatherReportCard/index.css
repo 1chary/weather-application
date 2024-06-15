@@ -1,0 +1,65 @@
+.weather-details-container {
+    margin-top: 10px;
+    border: 1px solid black;
+    height: 100%;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media screen and (max-width: 767px) {
+    .weather-details-container {
+        width: 100%;
+    }
+}
+.city-and-date-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+.city-and-country-container {
+    display: flex;
+    align-items: center;
+}
+.city-name-style {
+    color: black;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+@media screen and (max-width: 767px) {
+    .city-name-style {
+        font-size: 20px;
+    }
+}
+.location-icon {
+    font-size: 30px;
+}
+@media screen and (max-width: 767px) {
+    .location-icon {
+        font-size: 20px;
+    }
+}
+.date-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.date-style {
+    font-size: 24px;
+}
+@media screen and (max-width: 767px) {
+    .date-style {
+        font-size: 18px;
+    }
+}
+
+.temperature-container {
+    display: flex;
+    align-items: center;
+}
+
+.celsius-icon {
+    font-size: 30px;
+    
+}

@@ -1,6 +1,7 @@
 import { CiSearch } from "react-icons/ci"
 import "./App.css"
 import { useState } from "react"
+import WeatherReportCard from "./components/WeatherReportCard"
 
 const App = () => {
   const [userInput,changeUserInput] = useState("")
@@ -20,6 +21,7 @@ const App = () => {
       const fetchingDetails = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${userInput}&appid=2fe74895e927cbe81e92169f1a159f12`)
       if (fetchingDetails.ok === true) {
         const data = await fetchingDetails.json()
+        
         const dataConversion = {
             latitude: data.coord.lat,
             longitude: data.coord.lon,
@@ -27,7 +29,9 @@ const App = () => {
             pressure: data.main.pressure,
             temperature: data.main.temp,
             condition: data.weather[0].main,
-            wind:data.wind.speed
+            wind:data.wind.speed,
+            city: data.name,
+            country: data.sys.country
           };
           enterWeatherData(dataConversion)
           displayNoInputMessage(false)
@@ -41,7 +45,6 @@ const App = () => {
     }
   }
 
-
   return (
   <div className = "container-element">
     <form className = "form-container" onSubmit = {submitTheInputDetails}>
@@ -51,6 +54,12 @@ const App = () => {
           <CiSearch className="icon-style" />
         </button>
       </div>
+      {noUserInputMessage && (
+        <p className="no-input-error-message">*Enter the city name or zip code*</p>
+      )}
+      {storeResponseData && (
+        < WeatherReportCard weatherReport = {storeResponseData} />
+      )}
     </form>
   </div>
   )
