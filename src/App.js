@@ -4,6 +4,11 @@ import { useState } from "react"
 
 const App = () => {
   const [userInput,changeUserInput] = useState("")
+  const [storeResponseData,enterWeatherData] = useState(null);
+  const [noUserInputMessage, displayNoInputMessage] = useState(false);
+  const [apiFailureMessage,displayApiFailure] = useState(false);
+
+
 
   const onChangeUserInput = (event) => {
     changeUserInput(event.target.value)
@@ -13,10 +18,29 @@ const App = () => {
     event.preventDefault()
     if (userInput !== "") {
       const fetchingDetails = await fetch(`https://api.openweathermap.org/data/2.5/weather?units=metric&q=${userInput}&appid=2fe74895e927cbe81e92169f1a159f12`)
-      const data = await fetchingDetails.json()
-      
+      if (fetchingDetails.ok === true) {
+        const data = await fetchingDetails.json()
+        const dataConversion = {
+            latitude: data.coord.lat,
+            longitude: data.coord.lon,
+            humidity: data.main.humidity,
+            pressure: data.main.pressure,
+            temperature: data.main.temp,
+            condition: data.weather[0].main,
+            wind:data.wind.speed
+          };
+          enterWeatherData(dataConversion)
+          displayNoInputMessage(false)
+      }
+      else {
+        displayApiFailure(true)
+      }
+    }
+    else {
+      displayNoInputMessage(true)
     }
   }
+
 
   return (
   <div className = "container-element">
