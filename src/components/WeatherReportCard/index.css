@@ -12,10 +12,10 @@
     }
 }
 .dark-mode {
-    color: white;
+    color: orange;
 }
 .light-mode {
-    color: black;
+    color: white;
 }
 
 
@@ -38,6 +38,11 @@
         font-size: 20px;
     }
 }
+@media screen and (max-width: 991px) {
+    .city-name-style {
+        font-size: 20px;
+    }
+}
 .icon-style {
     font-size: 30px;
 }
@@ -45,6 +50,12 @@
     .icon-style {
         font-size: 20px;
         margin-right: 5px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .icon-style {
+        font-size: 20px;
+        margin-left: 5px;
     }
 }
 .date-container {
@@ -57,6 +68,11 @@
     margin-right: 10px;
 }
 @media screen and (max-width: 767px) {
+    .date-style {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 991px) {
     .date-style {
         font-size: 18px;
     }
@@ -88,6 +104,11 @@
     font-size: 20px;
 }
 @media screen and (max-width: 767px) {
+    .font-styling {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 991px) {
     .font-styling {
         font-size: 14px;
     }
