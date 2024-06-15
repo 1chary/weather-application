@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container-element {
+  background-image: url("https://wallpaperswide.com/download/light_background-wallpaper-3840x2160.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.form-container {
+  display: flex;
+  justify-content: center;
+  border: 2px solid #B2BEB5;
+  border-radius: 10px;
+  height: 50vh;
+  width: 60%
+}
+@media screen and (max-width: 767px) {
+  .form-container {
+    width: 90%;
+  }
+}
+.search-container {
+  height: 50px;
+  width: 70%;
+  border-radius: 20px;
+  margin-top: 20px;
+  border: none;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .search-container {
+    width: 90%;
+  }
+}
+.search-input-box {
+  border: none;
+  width: 90%;
+  height: 50px;
+  outline: none;
+  border-radius: 20px;
+  background-color: none;
 }
 
-.App-link {
-  color: #61dafb;
+.search-icon-button-style {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-style {
+  font-size: 32px;
 }
