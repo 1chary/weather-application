@@ -68,7 +68,6 @@ const WeatherReportCard = (props) => {
                 </div>
             </div>
         </div>
-        
     )
 }
 export default WeatherReportCard
