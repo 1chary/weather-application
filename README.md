@@ -11,9 +11,9 @@ Responsive Weather Application
 ### Approach 
 This application is completely built using functional components,
 
-=> Firstly initialized this project using create-react-app, In App.js file, i have initialized userinput variable by empty string with useState("") hook. which will store the user input, next to store the response data created another variable which the store the reponse data using useState(null) hook, if the user not entered any input value and clicks on search button to trigger the input field is empty created a variable with boolean value false and in case any api failure or connection failure to trigger failed to fetch the data created an variable with boolean false.
+=> Firstly initialized this project using create-react-app, In App.js file, i have initialized userinput variable by empty string with useState("") hook. which will store the user input, next to store the response data created another variable which the store the response data using useState(null) hook, if the user did not entered any input value and clicks on search button to trigger the input field is empty created a variable with boolean value false and in case any api failure or connection failure to trigger failed to fetch the data created an variable with boolean false.
 
-=> Made used of the forms which is one of the widely used to store and submit the user entered credentials or data.In this project make used of fetch method to fetch the data from open weather api with the help of api_key after successfull response, response is convert into the json data then data is added using 'push method' and is passed as props to child components and in case of failure message variable will set to true and passed accordingly. 
+=> Made used of the forms which is mostly used to store and submit the user entered credentials or data.In this project make used of fetch method to fetch the data from open weather api with the help of api_key after successfull response, response is converted into the json data then data is added using 'push method' and is passed as props to child components and in case of failure message variable will set to true and passed accordingly. 
 
 => Instead of dumping all the data in the one file created multiple components which believed to be one of the (Industry Best Practices) created two components to handle api success data and another for to display failure message.
 
@@ -29,5 +29,5 @@ HTML,CSS,JS,React JS.
 https://weather-application-woad-sigma.vercel.app/
 
 ### Further Improvements
-=> user authentication can be linked to this application. 
+=> user authentication can be added to this application. 
  
