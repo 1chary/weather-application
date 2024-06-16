@@ -14,13 +14,13 @@
   
 }
 
-.dark {
+.dark-bg-image {
   background-image: url("https://st.depositphotos.com/7149512/58305/i/450/depositphotos_583055722-stock-photo-summer-ukrainian-thunderstorms-skies-storm.jpg");
   background-size: cover;
 }
 
-.light {
-  background-image: url("https://www.actionnews5.com/resizer/bCcDJazn4SgyiYolXcG45Jej2Dk=/arc-photo-gray/arc3-prod/public/IRVBITVP3VE7JHT7MFOMPRA5TU.png");
+.light-bg-image{
+  background-image: url("https://www.shutterstock.com/image-photo/sunset-sky-dark-clouds-beautiful-260nw-1947141088.jpg");
   background-size: cover;
 }
 

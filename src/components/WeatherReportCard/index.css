@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 }
 @media screen and (max-width: 767px) {
     .weather-details-container {
@@ -13,9 +14,11 @@
 }
 .dark-mode {
     color: orange;
+    font-weight: 600;
 }
 .light-mode {
     color: white;
+    font-weight: 600;
 }
 
 

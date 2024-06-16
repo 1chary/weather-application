@@ -51,7 +51,7 @@ const App = () => {
     changeModeOfTheApplication(!modeOfApplication)
   }
 
-  let backgroundOfTheContainer = modeOfApplication ? "dark" : "light"
+  let backgroundOfTheContainer = modeOfApplication ? "dark-bg-image" : "light-bg-image"
 
   return (
     <ContextFile.Provider value = {[modeOfApplication,changeModeOfTheApplication]}>
