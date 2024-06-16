@@ -22,6 +22,9 @@ This application is completely built using functional components,
 
 => Additionally to enhance user experience the light-mode and dark-mode feature is implemented using react context, a file seperately been created for context and value is passed using ContextFileName.Provider and accessed by use context() hook.
 
+### Tech Stack:
+HTML,CSS,JS,React JS.
+
 ### Deployed Project Link:
 https://weather-application-woad-sigma.vercel.app/
 
