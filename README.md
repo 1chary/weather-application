@@ -3,7 +3,7 @@ Responsive Weather Application
 
 ### Getting Started
 => npm install (These will install all dependencies)
-=> npm start (To start (To run this application)
+=> npm start (To run this application)
 
 ### Description of the project 
 => When user enter the city name or zip code and clicks on the search icon he can able to view the city weather details like (Temperature, Humidity, Wind Speed, Latitude, Longitude, city with iso code of country, date and time) and also users have an additional feature to switch between light-mode and dark-mode.
