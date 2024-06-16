@@ -60,7 +60,7 @@
   height: 50px;
   outline: none;
   border-radius: 20px;
-  background-color: none;
+  background-color: transparent;
   margin-left: 20px;
   margin-right: 20px;
 }
